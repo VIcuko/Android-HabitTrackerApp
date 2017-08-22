@@ -6,7 +6,7 @@ import android.provider.BaseColumns;
  * Created by Vicuko on 22/8/17.
  */
 
-public class HabitsContract {
+public class HabitContract {
     public static abstract class HabitEntry implements BaseColumns {
 
         public static final String TABLE_NAME = "habits";
