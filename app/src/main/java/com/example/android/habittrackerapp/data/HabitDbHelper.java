@@ -17,13 +17,13 @@ public class HabitDbHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "shelter.db";
 
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + HabitEntry.TABLE_NAME+ " (" +
+            "CREATE TABLE " + HabitEntry.TABLE_NAME + " (" +
                     HabitEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     HabitEntry.COLUMN_HABIT_NAME + " TEXT NOT NULL," +
                     HabitEntry.COLUMN_HABIT_FREQUENCY + " TEXT," +
                     HabitEntry.COLUMN_HABIT_DAYS_OBJECTIVE + " INTEGER NOT NULL," +
                     HabitEntry.COLUMN_HABIT_DAYS_COMPLETED + " INTEGER NOT NULL DEFAULT 0)," +
-                    HabitEntry.COLUMN_HABIT_REMINDER+ " INTEGER NOT NULL DEFAULT 0);";
+                    HabitEntry.COLUMN_HABIT_REMINDER + " INTEGER NOT NULL DEFAULT 0);";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + HabitEntry.TABLE_NAME;

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    private void insertHabit(){
+    private void insertHabit() {
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Log.v("MainActivity", "New row ID " + newRowId);
     }
 
-    private void selectHabits(){
+    private void selectHabits() {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
         String[] projection = {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         String[] selectionArgs = {"1"};
 
         String sortOrder =
-        HabitEntry.COLUMN_HABIT_DAYS_COMPLETED + " ASC";
+                HabitEntry.COLUMN_HABIT_DAYS_COMPLETED + " ASC";
 
         Cursor cursor = db.query(
                 HabitEntry.TABLE_NAME,
