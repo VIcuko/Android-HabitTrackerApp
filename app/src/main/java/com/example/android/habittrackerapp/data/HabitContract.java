@@ -14,8 +14,8 @@ public class HabitContract {
         public static final String _ID = BaseColumns._ID;
         public static final String COLUMN_HABIT_NAME = "name";
         public static final String COLUMN_HABIT_FREQUENCY = "frequency";
-        public static final String COLUMN_HABIT_DAYS_COMPLETED = "completed";
         public static final String COLUMN_HABIT_DAYS_OBJECTIVE = "objective";
+        public static final String COLUMN_HABIT_DAYS_COMPLETED = "completed";
         public static final String COLUMN_HABIT_REMINDER = "reminder";
 
         /*
