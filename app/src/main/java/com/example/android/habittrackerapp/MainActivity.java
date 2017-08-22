@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mDbHelper = new HabitDbHelper(this);
     }
 
     private void insertHabit() {
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Log.v("MainActivity", "New row ID " + newRowId);
     }
 
-    private void selectHabits() {
+    private String selectHabits() {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
         String[] projection = {
@@ -92,5 +93,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         cursor.close();
+        return results;
     }
 }
