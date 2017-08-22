@@ -19,7 +19,7 @@ public class HabitContract {
         public static final String COLUMN_HABIT_REMINDER = "reminder";
 
         /*
-        Possible values for the gender of the pet
+        Possible status for the reminder
          */
         public static final int REMINDER_ACTIVE = 0;
         public static final int REMINDER_INACTIVE = 1;
