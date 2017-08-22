@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Log.v("MainActivity", "New row ID " + newRowId);
     }
 
-    private String selectHabits() {
+    private Cursor readData(){
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
         String[] projection = {
@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
                 null,                                     // don't filter by row groups
                 sortOrder                                 // The sort order
         );
+        return cursor;
+    };
+
+    private String selectHabits() {
+        Cursor cursor = readData();
 
         int idColumnIndex = cursor.getColumnIndex(HabitEntry._ID);
         int nameColumnIndex = cursor.getColumnIndex(HabitEntry.COLUMN_HABIT_NAME);
