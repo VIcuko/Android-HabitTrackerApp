@@ -22,7 +22,7 @@ public class HabitDbHelper extends SQLiteOpenHelper {
                     HabitEntry.COLUMN_HABIT_NAME + " TEXT NOT NULL," +
                     HabitEntry.COLUMN_HABIT_FREQUENCY + " TEXT," +
                     HabitEntry.COLUMN_HABIT_DAYS_OBJECTIVE + " INTEGER NOT NULL," +
-                    HabitEntry.COLUMN_HABIT_DAYS_COMPLETED + " INTEGER NOT NULL DEFAULT 0)," +
+                    HabitEntry.COLUMN_HABIT_DAYS_COMPLETED + " INTEGER NOT NULL DEFAULT 0," +
                     HabitEntry.COLUMN_HABIT_REMINDER + " INTEGER NOT NULL DEFAULT 0);";
 
     private static final String SQL_DELETE_ENTRIES =
